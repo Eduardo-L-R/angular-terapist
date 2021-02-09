@@ -13408,7 +13408,7 @@ var DisplayComponent = /** @class */ (function () {
             var _this = this;
             return __generator(this, function (_a) {
                 caseParam = this.route.snapshot.paramMap.get('caseName');
-                this.http.get("http://localhost:8080/checkbox/" + caseParam, this.sessionService.httpOptions())
+                this.http.get("http://134.122.125.97:8090/checkbox/" + caseParam, this.sessionService.httpOptions())
                     .subscribe(function (res) {
                     console.log(res);
                     _this.formElement = res;
@@ -13635,7 +13635,7 @@ var FormMantenedorComponent = /** @class */ (function () {
     };
     FormMantenedorComponent.prototype.mostrarFormulario = function (casoFormulario) {
         var _this = this;
-        var configUrl = "http://localhost:8080/checkbox/" + casoFormulario;
+        var configUrl = "http://134.122.125.97:8090/checkbox/" + casoFormulario;
         this.http.get(configUrl, this.sessionService.httpOptions()).subscribe(function (res) {
             if (_this.viewCardFormBuilder === false) {
                 _this.viewCardFormBuilder = true;
@@ -13678,7 +13678,7 @@ var FormMantenedorComponent = /** @class */ (function () {
                 nombre: this.formNumber,
                 formulario: '[]'
             };
-            this.http.post('http://localhost:8080/checkbox', informacion_1, this.sessionService.httpOptions())
+            this.http.post('http://134.122.125.97:8090/checkbox', informacion_1, this.sessionService.httpOptions())
                 .subscribe(function (res) { return __awaiter(_this, void 0, void 0, function () {
                 var _a;
                 return __generator(this, function (_b) {
@@ -13709,7 +13709,7 @@ var FormMantenedorComponent = /** @class */ (function () {
         this.formNumber = evento.target.seleccionCaso.value;
         // Verifica si existe el caso para modificar
         if (this.formNumber > 0) {
-            this.http.get("http://localhost:8080/checkbox/" + this.formNumber, this.sessionService.httpOptions())
+            this.http.get("http://134.122.125.97:8090/checkbox/" + this.formNumber, this.sessionService.httpOptions())
                 .subscribe(function (res) { return __awaiter(_this, void 0, void 0, function () {
                 var _a;
                 return __generator(this, function (_b) {
@@ -13740,7 +13740,7 @@ var FormMantenedorComponent = /** @class */ (function () {
             nombre: this.formNumber,
             formulario: JSON.stringify(this.formularioConstructor.actions.getData())
         };
-        this.http.patch("http://localhost:8080/checkbox/" + this.formNumber, informacion, this.sessionService.httpOptions())
+        this.http.patch("http://134.122.125.97:8090/checkbox/" + this.formNumber, informacion, this.sessionService.httpOptions())
             .subscribe(function (res) {
             alert("actualizado correctamente");
             if (_this.viewCardFormBuilder === true) {
@@ -13750,7 +13750,7 @@ var FormMantenedorComponent = /** @class */ (function () {
         }, function (err) { console.log(err); });
     };
     FormMantenedorComponent.prototype.obtenerInformacionFormularios = function () {
-        this.http.get('http://localhost:8080/checkbox', this.sessionService.httpOptions())
+        this.http.get('http://134.122.125.97:8090/checkbox', this.sessionService.httpOptions())
             .subscribe(function (res) { return res; });
     };
     FormMantenedorComponent.ctorParameters = function () { return [
@@ -13815,7 +13815,7 @@ var ViewFormsComponent = /** @class */ (function () {
     }
     ViewFormsComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        this.http.get('http://localhost:8080/checkbox', this.sessionService.httpOptions())
+        this.http.get('http://134.122.125.97:8090/checkbox', this.sessionService.httpOptions())
             .subscribe(function (res) {
             console.log(res);
             res.map(function (element) {
@@ -13953,7 +13953,7 @@ var SessionService = /** @class */ (function () {
     function SessionService(http, router) {
         this.http = http;
         this.router = router;
-        this.url = 'http://localhost:8080/';
+        this.url = 'http://134.122.125.97:8090/';
     }
     SessionService.prototype.login = function (sesion) {
         var _this = this;

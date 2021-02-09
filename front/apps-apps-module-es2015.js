@@ -13059,7 +13059,7 @@ let DisplayComponent = class DisplayComponent {
     ngOnInit() {
         return __awaiter(this, void 0, void 0, function* () {
             const caseParam = this.route.snapshot.paramMap.get('caseName');
-            this.http.get(`http://localhost:8080/checkbox/${caseParam}`, this.sessionService.httpOptions())
+            this.http.get(`http://134.122.125.97:8090/checkbox/${caseParam}`, this.sessionService.httpOptions())
                 .subscribe((res) => {
                 console.log(res);
                 this.formElement = res;
@@ -13254,7 +13254,7 @@ let FormMantenedorComponent = class FormMantenedorComponent {
         this.mostrarCartaFormularios();
     }
     mostrarFormulario(casoFormulario) {
-        let configUrl = `http://localhost:8080/checkbox/${casoFormulario}`;
+        let configUrl = `http://134.122.125.97:8090/checkbox/${casoFormulario}`;
         this.http.get(configUrl, this.sessionService.httpOptions()).subscribe((res) => {
             if (this.viewCardFormBuilder === false) {
                 this.viewCardFormBuilder = true;
@@ -13296,7 +13296,7 @@ let FormMantenedorComponent = class FormMantenedorComponent {
                 nombre: this.formNumber,
                 formulario: '[]'
             };
-            this.http.post('http://localhost:8080/checkbox', informacion, this.sessionService.httpOptions())
+            this.http.post('http://134.122.125.97:8090/checkbox', informacion, this.sessionService.httpOptions())
                 .subscribe((res) => __awaiter(this, void 0, void 0, function* () {
                 this.formData = yield informacion;
                 yield this.mostrarFormulario(this.formNumber);
@@ -13314,7 +13314,7 @@ let FormMantenedorComponent = class FormMantenedorComponent {
         this.formNumber = evento.target.seleccionCaso.value;
         // Verifica si existe el caso para modificar
         if (this.formNumber > 0) {
-            this.http.get(`http://localhost:8080/checkbox/${this.formNumber}`, this.sessionService.httpOptions())
+            this.http.get(`http://134.122.125.97:8090/checkbox/${this.formNumber}`, this.sessionService.httpOptions())
                 .subscribe((res) => __awaiter(this, void 0, void 0, function* () {
                 this.formData = yield (JSON.parse(res.formulario));
                 yield this.mostrarFormulario(this.formNumber);
@@ -13332,7 +13332,7 @@ let FormMantenedorComponent = class FormMantenedorComponent {
             nombre: this.formNumber,
             formulario: JSON.stringify(this.formularioConstructor.actions.getData())
         };
-        this.http.patch(`http://localhost:8080/checkbox/${this.formNumber}`, informacion, this.sessionService.httpOptions())
+        this.http.patch(`http://134.122.125.97:8090/checkbox/${this.formNumber}`, informacion, this.sessionService.httpOptions())
             .subscribe((res) => {
             alert("actualizado correctamente");
             if (this.viewCardFormBuilder === true) {
@@ -13342,7 +13342,7 @@ let FormMantenedorComponent = class FormMantenedorComponent {
         }, (err) => { console.log(err); });
     }
     obtenerInformacionFormularios() {
-        this.http.get('http://localhost:8080/checkbox', this.sessionService.httpOptions())
+        this.http.get('http://134.122.125.97:8090/checkbox', this.sessionService.httpOptions())
             .subscribe((res) => { return res; });
     }
 };
@@ -13405,7 +13405,7 @@ let ViewFormsComponent = class ViewFormsComponent {
         this.path = `/apps/display/${this.formElements}`;
     }
     ngAfterViewInit() {
-        this.http.get('http://localhost:8080/checkbox', this.sessionService.httpOptions())
+        this.http.get('http://134.122.125.97:8090/checkbox', this.sessionService.httpOptions())
             .subscribe((res) => {
             console.log(res);
             res.map((element) => {
@@ -13541,7 +13541,7 @@ let SessionService = class SessionService {
     constructor(http, router) {
         this.http = http;
         this.router = router;
-        this.url = 'http://localhost:8080/';
+        this.url = 'http://134.122.125.97:8090/';
     }
     login(sesion) {
         // const params = new HttpParams()
