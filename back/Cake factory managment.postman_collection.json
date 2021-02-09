@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "7ac588ad-615d-47db-9527-07664999a4ab",
+		"name": "Cake factory managment",
+		"description": "colection for request in application of cake factory management.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost server",
+			"item": [
+				{
+					"name": "add cake",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"cakeName\",\r\n    \"price\": 24,\r\n    \"flavor\": \"chocolate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtain all cakes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find info of some cake",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/5faccbd46d4ca30004154dd5",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								"5faccbd46d4ca30004154dd5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modify cake",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"cakeName17\",\r\n    \"price\": 17,\r\n    \"flavor\": \"sweet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/5faccbd46d4ca30004154dd5",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								"5faccbd46d4ca30004154dd5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cake",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/5faccbd46d4ca30004154dd5",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								"5faccbd46d4ca30004154dd5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "deploy server in heroku",
+			"item": [
+				{
+					"name": "add cake",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"cakeName\",\r\n    \"price\": 24,\r\n    \"flavor\": \"chocolate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtain all cakes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find info of some cake",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modify cake",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"cakeName2\",\r\n    \"price\": 48,\r\n    \"flavor\": \"mint\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cake",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://cake-factory-test.herokuapp.com/cakes/5facccdefc58930004c9a740",
+							"protocol": "https",
+							"host": [
+								"cake-factory-test",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"cakes",
+								"5facccdefc58930004c9a740"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0f0f9494-5396-4cf4-8c53-81339d33859f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "daa091ae-cbbe-4ce8-b21b-564aee005299",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
